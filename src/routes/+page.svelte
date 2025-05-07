@@ -31,7 +31,7 @@
     const providers = zebar.createProviderGroup({
       battery: { type: "battery" },
       cpu: { type: "cpu" },
-      date: { type: "date", formatting: "L/d h:mm a" },
+      date: { type: "date", formatting: "LLL d h:mm a" },
       glazewm: { type: "glazewm" },
       memory: { type: "memory" },
       network: { type: "network" },

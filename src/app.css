@@ -15,3 +15,7 @@
     font-size: var(--font-size);
   }
 }
+
+.max-content-width {
+  width: max-content;
+}

@@ -12,7 +12,7 @@
   let { date, glazewm, network, weather }: RightGroupProps = $props();
 </script>
 
-<div class="flex flex-row gap-3 items-center">
+<div class="flex flex-row gap-3 items-center max-content-width">
   <NowPlaying glazewm={glazewm}/>
   <div class="flex flex-row items-center gap-1">
     {#if network?.defaultInterface?.type === "ethernet"}
