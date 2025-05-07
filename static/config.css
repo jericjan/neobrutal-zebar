@@ -10,19 +10,24 @@
   --font-weight: 500;
 
   /* border */
-  --border-size: 0.125rem;
-  --radius: 0.25rem;
+  /* --border-size: 0.125rem; */
+  --border-size: 1px;
+  /* --radius: 0.25rem; */
+  --radius: 9999px;
+
 
   /* shadow */
-  --shadow-size-bar: 0.25rem;
-  --shadow-size-button: 0.125rem;
+  /* --shadow-size-bar: 0.25rem; */
+  /* --shadow-size-button: 0.125rem; */
+  --shadow-size-bar: 0px;
+  --shadow-size-button: 0px;
 
   /* colors */
   --text: var(--rp-text);
   --bg: var(--rp-overlay);
   --border: var(--rp-highlight-low);
   --shadow: var(--rp-highlight-low);
-  --icon: var(--rp-love);
+  --icon: var(--rp-gold);
   --memory: var(--rp-iris);
   --cpu: var(--rp-rose);
   --cpu-high-usage: var(--rp-love);
