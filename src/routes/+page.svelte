@@ -8,7 +8,8 @@
     MemoryOutput,
     DateOutput,
     NetworkOutput,
-    WeatherOutput
+    WeatherOutput,
+    DiskOutput
   } from "zebar";
 
   import "../app.css";
@@ -24,16 +25,18 @@
   let memory = $state<MemoryOutput | null>();
   let network = $state<NetworkOutput | null>();
   let weather = $state<WeatherOutput | null>();
+  let disk = $state<DiskOutput | null>();    
 
   onMount(() => {
     const providers = zebar.createProviderGroup({
       battery: { type: "battery" },
       cpu: { type: "cpu" },
-      date: { type: "date", formatting: "HH:mm" },
+      date: { type: "date", formatting: "L/d h:mm a" },
       glazewm: { type: "glazewm" },
       memory: { type: "memory" },
       network: { type: "network" },
-      weather: { type: "weather" }
+      weather: { type: "weather" },
+      disk: { type: "disk" }
     });
 
     providers.onOutput(() => {
@@ -44,6 +47,7 @@
       memory = providers.outputMap.memory;
       network = providers.outputMap.network;
       weather = providers.outputMap.weather;
+      disk = providers.outputMap.disk;
     });
   });
 </script>
@@ -52,7 +56,7 @@
   class="grid grid-cols-3 items-center h-bar my-zby mx-zbx text-zb-text text-zb-size font-base"
 >
   <Group class="justify-self-start">
-    <LeftGroup battery={battery!} cpu={cpu!} memory={memory!} />
+    <LeftGroup disk={disk!} cpu={cpu!} memory={memory!} />
   </Group>
   <Group class="justify-self-center">
     <Workspaces glazewm={glazewm!} />
