@@ -16,7 +16,11 @@
   <NowPlaying glazewm={glazewm}/>
   <div class="flex flex-row items-center gap-1">
     {#if network?.defaultInterface?.type === "ethernet"}
-      <i class="ti ti-network"></i>
+      {#if network?.traffic?.received?.bytes! > 0 && network?.traffic?.transmitted?.bytes! > 0}
+        <i class="ti ti-network"></i>
+      {:else}
+        <i class="ti ti-wifi-off"></i>
+      {/if}
     {:else if network?.defaultInterface!.type === "wifi"}
       {#if network.defaultGateway!.signalStrength! >= 75}
         <i class="ti ti-wifi"></i>
