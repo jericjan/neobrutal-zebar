@@ -11,21 +11,21 @@
 
   /* border */
   /* --border-size: 0.125rem; */
-  --border-size: 1px;
+  --border-size: 2px;
   /* --radius: 0.25rem; */
   --radius: 9999px;
 
 
   /* shadow */
-  /* --shadow-size-bar: 0.25rem; */
-  /* --shadow-size-button: 0.125rem; */
-  --shadow-size-bar: 0px;
-  --shadow-size-button: 0px;
+  --shadow-size-bar: 0.25rem; 
+   --shadow-size-button: 0.125rem; 
+  /* --shadow-size-bar: 0px;
+  --shadow-size-button: 0px; */
 
   /* colors */
   --text: var(--rp-text);
   --bg: var(--rp-overlay);
-  --border: var(--rp-highlight-low);
+  --border: 244 13.63% 35.32%;
   --shadow: var(--rp-highlight-low);
   --icon: var(--rp-gold);
   --memory: var(--rp-iris);
