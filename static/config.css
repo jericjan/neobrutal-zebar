@@ -25,7 +25,7 @@
   /* colors */
   --text: var(--rp-text);
   --bg: var(--rp-overlay);
-  --border: 244 13.63% 35.32%;
+  --border: var(--rp-highlight-high);
   --shadow: var(--rp-highlight-low);
   --icon: var(--rp-gold);
   --memory: var(--rp-iris);
