@@ -19,3 +19,7 @@
 .max-content-width {
   width: max-content;
 }
+
+.scale-60 {
+  transform: scale(0.6);
+}

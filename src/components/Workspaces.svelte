@@ -32,7 +32,7 @@
     {#each glazewm.currentWorkspaces as workspace, i}
       <Button
         iconClass="ti {workspace.hasFocus ? 'ti-point-filled' : 'ti-point'}"
-        class="text-zb-ws-{i}"
+        class="text-zb-ws-{i} {workspace.hasFocus ? '' : 'scale-60'}"
         callback={() =>
           glazewm!.runCommand(`focus --workspace ${workspace.name}`)}
       />
