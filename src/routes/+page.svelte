@@ -26,6 +26,7 @@
   let network = $state<NetworkOutput | null>();
   let weather = $state<WeatherOutput | null>();
   let disk = $state<DiskOutput | null>();    
+  let pauseClass = $state<string>("");    
 
   onMount(() => {
     const providers = zebar.createProviderGroup({
@@ -40,7 +41,6 @@
     });
 
     providers.onOutput(() => {
-      battery = providers.outputMap.battery;
       cpu = providers.outputMap.cpu;
       date = providers.outputMap.date;
       glazewm = providers.outputMap.glazewm;
@@ -48,6 +48,7 @@
       network = providers.outputMap.network;
       weather = providers.outputMap.weather;
       disk = providers.outputMap.disk;
+      pauseClass = glazewm && glazewm.isPaused ?"glazewm-paused" : ""
     });
   });
 </script>
@@ -55,13 +56,13 @@
 <div
   class="grid grid-cols-3 items-center h-bar my-zby mx-zbx text-zb-text text-zb-size font-base"
 >
-  <Group class="justify-self-start">
+  <Group class="justify-self-start {pauseClass}">
     <LeftGroup disk={disk!} cpu={cpu!} memory={memory!} />
   </Group>
-  <Group class="justify-self-center">
+  <Group class="justify-self-center {pauseClass}">
     <Workspaces glazewm={glazewm!} />
   </Group>
-  <Group class="justify-self-end">
+  <Group class="justify-self-end {pauseClass}">
     <RightGroup
       date={date!}
       glazewm={glazewm!}

@@ -9,8 +9,8 @@ dependencies:
     specifier: ^1.7.0
     version: 1.7.0
   zebar:
-    specifier: ^2.6.1
-    version: 2.7.0
+    specifier: ^3.1.1
+    version: 3.1.1
 
 devDependencies:
   '@sveltejs/adapter-auto':
@@ -2942,14 +2942,14 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /zebar@2.7.0:
-    resolution: {integrity: sha512-Ev4SgnkWBXlL74XksoiOKGumwKqeT4UEL42MRyDyNOlwo4FZD0Eq6T5ghksBJJzWb0ULLNxKA2nNItrY9dM0ng==}
+  /zebar@3.1.1:
+    resolution: {integrity: sha512-EdWeAdHCFFupIjnLy2zMzKEAMDRQGb5MaxWnOzn340GE83RqvIbzNl0SwG5f66vU1Mpnau/axbJqA/GimI+e5Q==}
     dependencies:
       '@tauri-apps/api': 2.0.2
       '@tauri-apps/plugin-dialog': 2.0.0
       glazewm: 1.7.0
       luxon: 3.4.4
-      zod: 3.22.4
+      zod: 3.24.2
     transitivePeerDependencies:
       - ws
     dev: false
@@ -2966,8 +2966,8 @@ packages:
       zod: 3.24.4
     dev: true
 
-  /zod@3.22.4:
-    resolution: {integrity: sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==}
+  /zod@3.24.2:
+    resolution: {integrity: sha512-lY7CDW43ECgW9u1TcT3IoXHflywfVqDYze4waEz812jR/bZ8FHDsl7pFQoSZTz5N+2NqRXs8GBwnAwo3ZNxqhQ==}
     dev: false
 
   /zod@3.24.4:
