@@ -25,6 +25,10 @@
   transform: scale(0.6);
 }
 
+.scale-60 > .ti {
+    scale: 200%;
+}
+
 .glazewm-paused {
     background-color: #290000;
 }

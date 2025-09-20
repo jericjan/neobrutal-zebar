@@ -31,7 +31,7 @@
   <div class="flex flex-row gap-2 items-center">
     {#each glazewm.currentWorkspaces as workspace, i}
       <Button
-        iconClass="ti {workspace.hasFocus ? 'ti-point-filled' : 'ti-point'}"
+        iconClass="ti {workspace.hasFocus ? `ti-circle-number-${workspace.name}-filled` : `ti-circle-number-${workspace.name}`}"
         class="text-zb-ws-{i} {workspace.hasFocus ? '' : 'scale-60'}"
         callback={() =>
           glazewm!.runCommand(`focus --workspace ${workspace.name}`)}
