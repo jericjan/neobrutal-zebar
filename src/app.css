@@ -53,3 +53,12 @@
 .bottom-left-rounding {
   border-radius: 5px 5px 5px 20px !important;
 }
+
+#bg-img {
+  background: url("/teio.png") repeat 320px 798px;
+  mask-image: linear-gradient(to top, transparent 1%, black 99%);
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  z-index: -1;
+}

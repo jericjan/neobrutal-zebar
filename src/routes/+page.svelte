@@ -70,4 +70,5 @@
       weather={weather!}
     />
   </Group>
+  <div id="bg-img"></div>
 </div>
