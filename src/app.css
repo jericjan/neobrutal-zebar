@@ -36,3 +36,8 @@
 #ignore-button {
   padding-left: 10px;
 }
+
+.workspace-separator {
+  margin-left: -10px;
+  margin-right: -10px;
+}

@@ -29,9 +29,14 @@
 
 {#if glazewm}
   <div class="flex flex-row gap-2 items-center">
-    <button id="ignore-button" title="Click to ignore focused window" onclick={
-      () => glazewm!.runCommand("ignore")}>i</button>
+    <button aria-label="ignore-button" id="ignore-button" title="Click to ignore focused window" onclick={
+      () => glazewm!.runCommand("ignore")}>
+      <i class="ti ti-filter-x"></i>
+    </button>
     {#each glazewm.currentWorkspaces as workspace, i}
+      {#if i > 0 && workspace.name - glazewm.currentWorkspaces[i - 1].name > 1}
+      <i class="ti ti-minus-vertical workspace-separator"></i>
+      {/if}
       <Button
         iconClass="ti {workspace.hasFocus ? `ti-circle-number-${workspace.name}-filled` : `ti-circle-number-${workspace.name}`}"
         class="text-zb-ws-{i} {workspace.hasFocus ? '' : 'scale-60'}"
