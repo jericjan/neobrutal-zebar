@@ -28,6 +28,8 @@
   let disk = $state<DiskOutput | null>();    
   let pauseClass = $state<string>("");    
 
+  let bgShift = $state<number>(0)
+
   onMount(() => {
     const providers = zebar.createProviderGroup({
       battery: { type: "battery" },
@@ -49,6 +51,7 @@
       weather = providers.outputMap.weather;
       disk = providers.outputMap.disk;
       pauseClass = glazewm && glazewm.isPaused ?"glazewm-paused" : ""
+      bgShift = 100/9*(Number(glazewm?.focusedWorkspace?.name) - 1)
     });
   });
 </script>
@@ -70,5 +73,9 @@
       weather={weather!}
     />
   </Group>
-  <div id="bg-img"></div>
+  <script>
+    
+  </script>
+  <div class="bg-img" style="transform:translateX({bgShift}%)"></div>
+  <div class="bg-img" style="transform:translateX({bgShift-100}%)"></div>
 </div>
