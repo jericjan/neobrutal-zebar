@@ -54,15 +54,15 @@
 </script>
 
 <div
-  class="grid grid-cols-3 items-center h-bar my-zby mx-zbx text-zb-text text-zb-size font-base"
+  class="grid grid-cols-3 items-center h-bar mb-zby text-zb-text text-zb-size font-base"
 >
-  <Group class="justify-self-start {pauseClass}">
+  <Group class="justify-self-start {pauseClass} bottom-right-rounding">
     <LeftGroup disk={disk!} cpu={cpu!} memory={memory!} />
   </Group>
-  <Group class="justify-self-center {pauseClass}">
+  <Group class="justify-self-center {pauseClass} bottom-rounding">
     <Workspaces glazewm={glazewm!} />
   </Group>
-  <Group class="justify-self-end {pauseClass}">
+  <Group class="justify-self-end {pauseClass} bottom-left-rounding">
     <RightGroup
       date={date!}
       glazewm={glazewm!}

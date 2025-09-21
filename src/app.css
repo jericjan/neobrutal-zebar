@@ -41,3 +41,15 @@
   margin-left: -10px;
   margin-right: -10px;
 }
+
+.bottom-rounding {
+  border-radius: 5px 5px 20px 20px !important;
+}
+
+.bottom-right-rounding {
+  border-radius: 5px 5px 20px 5px !important;
+}
+
+.bottom-left-rounding {
+  border-radius: 5px 5px 5px 20px !important;
+}
