@@ -29,6 +29,8 @@
 
 {#if glazewm}
   <div class="flex flex-row gap-2 items-center">
+    <button id="ignore-button" title="Click to ignore focused window" onclick={
+      () => glazewm!.runCommand("ignore")}>i</button>
     {#each glazewm.currentWorkspaces as workspace, i}
       <Button
         iconClass="ti {workspace.hasFocus ? `ti-circle-number-${workspace.name}-filled` : `ti-circle-number-${workspace.name}`}"
