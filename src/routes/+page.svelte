@@ -1,4 +1,5 @@
 <script lang="ts">
+  import DisplacementElement from '$lib/DisplacementElement.svelte';
   import { onMount } from "svelte";
   import * as zebar from "zebar";
   import type {
@@ -59,7 +60,17 @@
 <div
   class="grid grid-cols-3 items-center h-bar mb-zby text-zb-text text-zb-size font-base"
 >
-<div class="glitch-filter  {pauseClass ? "w-full" : "w-[0%]"}"></div>
+ <DisplacementElement
+          width={1920}
+          height={50}
+          radius={0}
+          depth={5}
+          strength={20}
+          blur={0.5}
+          chromaticAberration={5} 
+          className="glitch-filter {pauseClass ? "w-full" : "w-[0%]"}">
+
+ </DisplacementElement>
   <Group class="justify-self-start {pauseClass} bottom-right-rounding">
     <LeftGroup disk={disk!} cpu={cpu!} memory={memory!} />
   </Group>
