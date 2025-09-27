@@ -83,7 +83,8 @@ export default {
     "text-zb-ws-4",
     "justify-self-start",
     "justify-self-center",
-    "justify-self-end"
+    "justify-self-end",
+    "w-[0%]"
   ],
   plugins: []
 };

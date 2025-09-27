@@ -59,6 +59,7 @@
 <div
   class="grid grid-cols-3 items-center h-bar mb-zby text-zb-text text-zb-size font-base"
 >
+<div class="glitch-filter  {pauseClass ? "w-full" : "w-[0%]"}"></div>
   <Group class="justify-self-start {pauseClass} bottom-right-rounding">
     <LeftGroup disk={disk!} cpu={cpu!} memory={memory!} />
   </Group>
